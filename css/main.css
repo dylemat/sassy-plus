@@ -1,0 +1,167 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: #B83F1C;
+}
+
+h1,
+h2 {
+  color: yellowgreen;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("https://images.pexels.com/photos/759817/pexels-photo-759817.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.container {
+  width: 860px;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .circle {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background: #B83F1C;
+  border-radius: 50%;
+}
+
+header .circle p {
+  text-align: center;
+}
+
+header nav {
+  margin-left: auto;
+}
+
+header a {
+  color: yellowgreen;
+  margin: 10px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  top: -55px;
+  margin-bottom: 20px;
+}
+
+.card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 10px;
+}
+
+.window {
+  border-top: yellowgreen solid 10px;
+}
+
+.window img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  background: yellowgreen;
+  padding: 12px;
+  border-radius: 23px;
+  text-decoration: none;
+}
+
+.team {
+  position: relative;
+  background: rgba(204, 204, 204, 0.5);
+  padding: 12px;
+  margin-top: 22px;
+}
+
+.team::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+  background-image: url("https://images.pexels.com/photos/237950/pexels-photo-237950.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-position: center;
+  background-size: cover;
+}
+
+.team h2 {
+  z-index: 2;
+}
+
+/* Flashing */
+@-webkit-keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash:hover {
+  opacity: 1;
+  -webkit-animation: flash 1s;
+  animation: flash 1.1s;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,160 @@
+$firstcolor:#B83F1C;
+$secondcolor: yellowgreen;
+$op:.21;
+@mixin marginesy {
+    margin: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: $firstcolor;
+}
+
+h1,
+h2,
+    {
+    color: $secondcolor;
+}
+
+//gora header nav...
+.title {
+    text-transform: uppercase;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh; // background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    background-image: url('https://images.pexels.com/photos/759817/pexels-photo-759817.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.container {
+    width: 860px;
+    margin: 0 auto; // background: rgba(27, 51, 190, .1);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    .circle {
+        @include marginesy();
+        width: 50px;
+        height: 50px;
+        background: $firstcolor;
+        border-radius: 50%; // position: relative;
+        // top: 22px;
+        p {
+            // line-height: 50px;
+            text-align: center;
+        }
+    }
+    nav {
+        margin-left: auto;
+    }
+    a {
+        color: $secondcolor;
+        @include marginesy();
+    }
+}
+
+// cards main section
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -55px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    @include marginesy();
+}
+
+.window {
+    border-top: $secondcolor solid 10px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.btn {
+    background: $secondcolor;
+    padding: 12px;
+    border-radius: 23px;
+    text-decoration: none;
+}
+
+// team sektion
+.team {
+    position: relative;
+    background: rgba(204, 204, 204, 0.5);
+    padding: 12px;
+    margin-top: 22px;
+}
+
+.team::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    background-image: url('https://images.pexels.com/photos/237950/pexels-photo-237950.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+    background-position: center;
+    background-size: cover;
+}
+
+.team h2 {
+    z-index: 2;
+}
+
+/* Flashing */
+
+@-webkit-keyframes flash {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.flash:hover {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1.1s;
+}
